@@ -5,9 +5,23 @@
     <meta charset="UTF-8" >
     <title>Calculator</title>
     <link id="css-theme" rel="stylesheet" href="styles/calculator.css" >
-    <script src="scripts/calculator.js"></script>
+    <script src="scripts/calculator.js" ></script>
+    <script src="scripts/switcher.js" ></script>
+
   </head>
   <body>
+    <div class="back-button">
+      <a href="index.html">← Back</a>
+    </div>
+  
+    <div class="theme-buttons">
+      <button data-theme="styles/calculator.css">Default</button>
+      <button data-theme="styles/ai-1.css">Blue</button>
+      <button data-theme="styles/ai-2.css">Cyberpunk</button>
+    </div>
+  
+    
+    
     <!-- calculator code structure inspired by https://www.geeksforgeeks.org/html/html-calculator/ -->
     <div class="calculator">
       <table id="calculator">
