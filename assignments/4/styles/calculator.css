@@ -1,0 +1,197 @@
+:root {
+  --navy: #0b1e3a;
+  --dark-background: rgb(30, 30, 30);
+  --dark-button: rgb(68, 68, 68);
+  --light-button: rgb(154, 154, 154);
+  --orange: rgb(236, 120, 60);
+  --button-width: 50px;
+  --button-height: 50px;
+  --button-wh: 100px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background-color: var(--dark-background);
+  color: #fff;
+  text-align: center;
+}
+
+/* responsiveness
+ */
+
+.calculator {
+  width: clamp(280px, 92vw, 520px); /* larger on desktop */
+  display: grid;
+  gap: 12px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 4px;
+}
+
+input[type="button"] {
+  width: var(--button-wh);
+  height: var(--button-wh);
+  background-color: var(--dark-button);
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+input[type="button"].r1 {
+  width: var(--button-wh);
+  height: var(--button-wh);
+  background-color: var(--light-button);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+input[type="button"].c4 {
+  width: var(--button-wh);
+  height: var(--button-wh);
+  background-color: var(--orange);
+  color: white;
+  font-size: 24px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+input[type="button"]:hover {
+  background-color: rgb(80, 80, 90); /* Lighter color on hover */
+}
+input[type="button"]:hover.c4 {
+  background-color: rgb(255, 153, 102); /* Lighter color on hover */
+}
+input[type="button"]:hover.r1 {
+  background-color: rgb(170, 170, 170); /* Lighter color on hover */
+}
+/* textbox */
+input[type="text"] {
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 1.5rem;
+  background-color: var(--dark-background);
+  border: none;
+  color: white;
+}
+
+#result {
+  width: 90%;
+  font-size: clamp(1.25rem, 4.5vw, 2.25rem);
+  font-weight: 700;
+  text-align: right;
+  background: var(--dark-background);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+}
+#row {
+    width: 50%;
+}
+
+
+/* ---------- RESPONSIVE SIZING ---------- */
+
+ /* Small phones */
+ @media (max-width: 420px) {
+    :root {
+      --button-wh: min(23.5vw, 96px);
+      --gap: 12px;
+    }
+    input[type="button"],
+    input[type="button"].r1,
+    input[type="button"].c4 {
+      font-size: clamp(1.25rem, 6vw, 1.8rem);
+    }
+    #result { font-size: clamp(1.7rem, 10vw, 2.8rem); }
+  }
+ /* Phones: make buttons BIG and use viewport-based sizing */
+ @media (max-width: 700px) {
+    .calculator { width: 94vw; }
+    :root {
+        /* used AI to get numbers related to viewport width */
+      /* 4 columns + 5 gaps ≈ 100vw; 22vw keeps them large like iPhone */
+      --button-wh: min(22vw, 92px);
+      --gap: 12px;
+    }
+    input[type="button"],
+    input[type="button"].r1,
+    input[type="button"].c4 {
+      font-size: clamp(1.2rem, 5.5vw, 1.7rem);
+    }
+    #result { font-size: clamp(1.6rem, 16.5vw, 2.6rem); }
+  }
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+    .calculator { width: min(94vw, 520px); }
+    :root {
+      --gap: 10px;
+    }
+    /* Slightly larger text so it still feels roomy */
+    input[type="button"],
+    input[type="button"].r1,
+    input[type="button"].c4 {
+      font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+    }
+    #result { font-size: clamp(1.4rem, 15.2vw, 2.4rem); }
+  }
+  
+  /* Big desktops: tiny bump per your note */
+@media (min-width: 912px) and (min-height: 800px) {
+    .calculator { width: min(94vw, 520px); }
+    :root {
+        --button-wh: 150px;
+      --gap: 10px;
+    }
+    /* Slightly larger text so it still feels roomy */
+    input[type="button"],
+    input[type="button"].r1,
+    input[type="button"].c4 {
+      font-size: clamp(3.1rem, 13.5vw, 3.4rem);
+    }
+    #result { font-size: clamp(3.1rem, 15.2vw, 3.4rem); }
+  }
+
+  /* Height-constrained displays */
+@media (max-height: 800px) and (min-width: 700px) {
+    :root {
+      /* how many grid cells we have */
+      --rows: 5;
+      --cols: 4;
+  
+      /* spacing + display height used in the fit calculation */
+      --gap: 8px;               
+      --result-h: 64px;         
+  
+      /* Fit buttons by BOTH width AND height so we never scroll */
+      --button-wh: min(
+        calc((100vw - (var(--cols) + 1) * var(--gap)) / var(--cols)),
+        calc((100svh - var(--result-h) - (var(--rows) + 1) * var(--gap)) / var(--rows))
+      );
+    }
+  
+    #result { width: 90%; }
+  
+    /* tiny font nudge so it never wraps on short heights */
+    input[type="button"],
+    input[type="button"].r1,
+    input[type="button"].c4 {
+      font-size: clamp(1rem, 2.6vw, 1.4rem);
+    }
+  }
+  

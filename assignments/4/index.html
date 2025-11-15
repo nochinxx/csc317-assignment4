@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>CSC317Portfolio</title>
+    <!-- Necessary to link the switcher style -->
+    <link id="css-theme" rel="stylesheet" href="styles/styles.css" >
+    <!-- setting viewport from for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Mario Jimenez</h1>
+      <img
+        src="images/profile.png"
+        width="125"
+        height="190"
+        alt="Portrait of Mario Jimenez"
+      >
+      <p>Computer Science Student at San Francisco State University</p>
+      <p style="margin: 4px 0 0 0">
+        <a href="mailto:mariojillesca@gmail.com">mariojillesca@gmail.com</a> ·
+        <a href="https://github.com/nochinxx">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/mario-jimenez-7b9683206/"
+          >LinkedIn</a
+        >
+      </p>
+    </header>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a computer science student @SFSU with a focus on building practical,
+      real-world applications. I’ve worked on projects like interactive
+      dashboards and database-driven tools. Teaching is also an important part
+      of my journey, as I recently started teaching coding at Marin Horizon Middle
+      School, and I have experience as a tutor in different places. I’m
+      especially interested in software engineering, data science, and exploring
+      emerging technologies like machine learning and VR/AR.
+      </p>
+      <p>My career interests include game development and cybersecurity...</p>
+
+      <aside>
+      <h2>Skills</h2>
+      <h3>Programming Languages & Tools</h3>
+      <ul>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript / TypeScript</li>
+      </ul>
+      <h3>Frameworks</h3>
+      <ul>
+        <li>React / Next.js</li>
+        <li>Django</li>
+        <li>Springboot</li>
+      </ul>
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li>VS Code</li>
+        <li>Firebase / Firestore</li>
+        <li>Tailwind</li>
+        <li>Git</li>
+      </ul>
+</aside>
+    </section>
+
+    <!-- projects -->
+    <section id="projects">
+      <h2 >Projects</h2>
+
+      <article>
+        <h3>
+          <a href="calculator.html">
+            JavaScript Calculator
+          </a>
+        </h3>
+        <h4>JavaScript · HTML · CSS</h4>
+        <p>
+          A calculator that calculates stuff for my webdev class.
+        </p>
+        <img src="images/calculator.png" alt="Calculator Screenshot" width="300">
+        <p>
+          <a href="https://github.com/nochinxx/CSC317/assignments/4/calculator.html">Code</a>
+        </p>
+      </article>
+      <article>
+        <h3>
+          <a href="https://nochinxx.github.io/projects/ucsd-data-structures/">
+            UCSD Data Structures & Performance
+          </a>
+        </h3>
+        <h4>Java · Algorithms · Data Structures</h4>
+        <p>
+          A series of five CS projects covering linked lists, tries,
+          autocomplete, text analysis, performance benchmarking, and spelling
+          suggestion engines. Focused on implementing core data structures from
+          scratch, optimizing algorithms, and validating correctness with JUnit
+          tests.
+        </p>
+        <p>
+          <a href="https://github.com/nochinxx/ucsd-data-structures">Code</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          <!-- I coauthored this project -->
+          <a href="https://github.com/nima64/Dayton-Sheets"
+            >Dayton Financial RFQ Tool</a
+          >
+        </h3>
+        <h4>Next.js · Firebase · Firestore · TanStack</h4>
+        <p>
+          Multi-tenant RFQ and quoting platform featuring real-time buyer/seller
+          dashboards, role-based access, interactive spreadsheet UI, seller
+          magic links, batch updates, and buyer aggregation views. Replaced
+          complex spreadsheets and saved thousands in operational costs.
+        </p>
+        <p>
+          <a href="https://github.com/nima64/Dayton-Sheets">Code</a> ·
+          <a
+            href="https://dayton-sheets-git-main-rintarouokabe12gmailcoms-projects.vercel.app/"
+            >Live</a
+          >
+        </p>
+      </article>
+
+      <article>
+        <!-- I coauthored this project -->
+        <h3>Nutrition Tracker</h3>
+        <h4>Next.js · USDA API · Chart.js · Tailwind</h4>
+        <p>
+          USDA API integration to scrape all the nutrients from different foods,
+          charts, role-based access, and daily macro insights with clean UI.
+        </p>
+        <p>
+          <a href="https://github.com/nima64/nutrition-nextjs">Code</a> ·
+          <a href="https://nutrition-nextjs.vercel.app/">Live</a>
+        </p>
+      </article>
+    </section>
+
+    <footer>
+    <p>This portfolio is for the use of CSC317 to check my personal most up to date page check this <a href="https://nochinxx.github.io">link.</a></p>
+  </footer>
+    <script src="scripts/switcher.js"></script>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+      <h3>Theme Switcher</h3>
+      <div class="theme-buttons">
+        <button class="theme-button" data-theme="hybrid">Hybrid</button>
+      </div>
+    </div>
+  </body>
+</html>

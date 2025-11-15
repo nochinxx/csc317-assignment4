@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" >
+    <title>Calculator</title>
+    <link id="css-theme" rel="stylesheet" href="styles/calculator.css" >
+    <script src="scripts/calculator.js"></script>
+  </head>
+  <body>
+    <!-- calculator code structure inspired by https://www.geeksforgeeks.org/html/html-calculator/ -->
+    <div class="calculator">
+      <table id="calculator">
+        <!-- row for result display -->
+        <tr class="row">
+          <td colspan="4">
+            <input type="text" value="0" id="result" disabled >
+          </td>
+        </tr>
+
+        <!-- create button and assign value to each button -->
+        <tr class="row">
+          <td><input type="button" value="⌫" class="r1" ></td>
+          <td><input type="button" value="AC" class="r1"> </td>
+          <td><input type="button" value="%" class="r1"></td>
+          <td><input type="button" value="÷" class="c4" ></td>
+        </tr>
+        <tr class="row">
+          <td><input type="button" value="7" ></td>
+          <td><input type="button" value="8" ></td>
+          <td><input type="button" value="9" ></td>
+          <td><input type="button" value="*" class="c4" ></td>
+        </tr>
+        <tr class="row">
+          <td><input type="button" value="4" ></td>
+          <td><input type="button" value="5" ></td>
+          <td><input type="button" value="6" ></td>
+          <td><input type="button" value="-" class="c4" ></td>
+        </tr>
+        <tr class="row">
+          <td><input type="button" value="1" ></td>
+          <td><input type="button" value="2" ></td>
+          <td><input type="button" value="3" ></td>
+          <td><input type="button" value="+" class="c4"></td>
+        </tr>
+        <tr class="row">
+          <td><input type="button" value="+/-" ></td>
+          <td><input type="button" value="0" ></td>
+          <td><input type="button" value="." ></td>
+          <td><input type="button" value="=" ></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
