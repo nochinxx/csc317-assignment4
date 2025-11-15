@@ -41,3 +41,7 @@ Styling choices
 Colors are defined as CSS variables for consistency (dark background, light numeric buttons, orange operators).
 
 For the result text size, I chose visually pleasing values using clamp and viewport units; there isn’t a standard set for calculator displays, so I tuned it by eye across device sizes.
+
+project link:
+
+https://nochinxx.github.io/csc317-assignment4/assignments/4/index.html
