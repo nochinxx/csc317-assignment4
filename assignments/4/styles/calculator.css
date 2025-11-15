@@ -29,6 +29,51 @@ body {
   display: grid;
   gap: 12px;
 }
+/* AI helped me with this buttons to find a visually pleasing size and spacing */
+/* back button */
+.back-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 100; 
+}
+.back-button a {
+  display: inline-block;
+  background-color: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+/* switcher buttons */
+
+.theme-buttons {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 90;
+  display: flex;
+  gap: 6px;
+}
+
+.theme-buttons button {
+  border: none;
+  background: var(--dark-button);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.theme-buttons button:hover {
+  background: var(--orange);
+  transform: translateY(-1px);
+}
 
 table {
   margin-left: auto;
