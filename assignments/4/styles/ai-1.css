@@ -1,0 +1,44 @@
+/* Blue & White theme (imports your base and overrides colors) */
+@import url("./calculator.css");
+
+/* Palette overrides */
+:root {
+  /* Treat the page as light */
+  --dark-background: #f6f9ff;       /* page & result bg (we'll override result below) */
+  --dark-button: #e7effa;           /* number buttons */
+  --light-button: #dfe6f2;          /* utility buttons (AC, ⌫, %) */
+  --orange: #2f6bff;                /* operator buttons (keeps your .c4 selector) */
+  --navy: #0b2e6f;                  /* not used much in base, but keeps your var set */
+}
+
+/* Body text on a light background */
+body { color: #0f1a2b; }
+
+/* Numbers & utility buttons: dark text on light buttons */
+input[type="button"] {
+  color: #0f1a2b;                   /* readable on light buttons */
+}
+
+/* Operator buttons: white text on blue */
+input[type="button"].c4 {
+  background-color: var(--orange);
+  color: #ffffff;
+}
+
+/* Hover states tuned to palette */
+input[type="button"]:hover {
+  background-color: #d8e5ff;
+}
+input[type="button"]:hover.r1 {
+  background-color: #d1d9e6;
+}
+input[type="button"]:hover.c4 {
+  background-color: #5a8bff;
+}
+
+/* Display: give it a blue header feel for contrast on a light page */
+#result {
+  background: #0b2e6f;
+  color: #ffffff;
+  border-radius: 12px;
+}
